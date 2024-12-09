@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="Grid" alignment="CENTER" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.petrik.calculator.HelloController">
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="20.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="20.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="20.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="20.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <children>
+      <Spinner fx:id="firstNumber" editable="true" GridPane.columnSpan="2" />
+      <Spinner fx:id="secondNumber" editable="true" GridPane.columnIndex="3" GridPane.columnSpan="2" />
+      <Button fx:id="plusButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#plusClick" text="+" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="minusButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#minusClick" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="multiplyButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#multiplyClick" text="*" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="divisonButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#divisonClick" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="percentageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#percentageClick" text="\%" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="outcome" alignment="CENTER" contentDisplay="CENTER" text="0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+   </children>
+</GridPane>
